@@ -2,6 +2,11 @@
 How to install Go (golang) when dealing with arm architecture. Tests were done on a Raspberry Pi 2 with Raspbian Jessie.
 
 ##Start with go1.4.3
+The general idea is that you first download the source and then compile it. But, for your convenience and to bypass this procedure, this git repository has already a binary tar, named `go1.4.3.linux-armv7.tar.gz`.
+
+ - If you want to learn how this file was generated, continue reading the relative section below (*"go1.4.3.linux-armv7.tar.gz - how it was created"*).
+ - If you want to proceed with the installation, continue with the following commands. 
+
 ```
 rm -fr /usr/local/go
 tar -xzf go1.4.3.linux-armv7.tar.gz -C /usr/local
