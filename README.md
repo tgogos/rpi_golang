@@ -1,4 +1,4 @@
-# How to instal Go on Raspberry Pi 3
+# How to install Go on Raspberry Pi 3
 ## Test environment
  - Raspberry Pi 3
  - Host OS: Raspbian Jessie Lite image (downloaded [2016-09-23-raspbian-jessie-lite.zip](http://director.downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2016-09-28/2016-09-23-raspbian-jessie-lite.zip) from the official site)
