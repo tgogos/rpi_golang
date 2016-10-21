@@ -11,9 +11,12 @@ The general idea is that you first download the source and then compile it. But,
  - If you want to proceed with the installation, continue with the following commands. 
 
 ```
-rm -fr /usr/local/go
+rm -rf /usr/local/go
+git clone https://github.com/tgogos/rpi_golang.git # (current repository)
+cd rpi_golang/
 tar -xzf go1.4.3.linux-armv7.tar.gz -C /usr/local
 export PATH=/usr/local/go/bin:$PATH
+echo "export PATH=/usr/local/go/bin:$PATH" >> /root/.bashrc
 go version #test it works
 ```
 
