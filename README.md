@@ -31,7 +31,7 @@ wget https://storage.googleapis.com/golang/go1.5.2.src.tar.gz
 tar -xz -C /usr/local -f go1.5.2.src.tar.gz
 
 cd /usr/local/go/src
-time GOROOT_BOOTSTRAP=/home/pi/go1.4 ./make.bash
+time GOROOT_BOOTSTRAP=/root/go1.4 ./make.bash
 go version #test that the new version is printed out
 ```
 
