@@ -4,6 +4,8 @@
  - Host OS: Raspbian Jessie Lite image (downloaded [2016-09-23-raspbian-jessie-lite.zip](http://director.downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2016-09-28/2016-09-23-raspbian-jessie-lite.zip) from the official site)
  - Docker image: `docker pull resin/rpi-raspbian:jessie-20160831`
 
+# #1 Without Go Version Manager (gvm)
+
 ##Start with go1.4.3
 The general idea is that you first download the source and then compile it. But, for your convenience and to bypass this procedure, this git repository has already a binary tar, named `go1.4.3.linux-armv7.tar.gz`.
 
@@ -54,4 +56,22 @@ time ./make.bash
 ```bash
 tar -czf ~/go1.4.3.linux-armv7.tar.gz -C /usr/local go
 tar --numeric-owner -czf ~/go1.4.3.linux-armv7.tar.gz -C /usr/local go
+```
+
+
+# #2 With Go Version Manager (gvm)
+[https://github.com/moovweb/gvm](https://github.com/moovweb/gvm)
+
+```bash
+sudo apt-get install curl git make binutils bison gcc build-essential
+# install gvm
+bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+source /home/pi/.gvm/scripts/gvm
+
+# install go
+gvm install go1.4 
+gvm use go1.4 
+export GOROOT_BOOTSTRAP=$GOROOT 
+gvm install go1.7
+gvm use go1.7 --default
 ```
