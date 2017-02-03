@@ -75,3 +75,26 @@ export GOROOT_BOOTSTRAP=$GOROOT
 gvm install go1.7
 gvm use go1.7 --default
 ```
+
+
+
+# Configuration of $PATH, $GOPATH variables
+From the ["Getting Started"](https://golang.org/doc/install) page of [golang.org](https://golang.org/):
+
+> Add `/usr/local/go/bin` to the PATH environment variable.
+> You can do this by adding this line to your `/etc/profile` (for a system-wide installation)
+> or `$HOME/.profile`: 
+
+```bash
+export PATH=$PATH:/usr/local/go/bin
+```
+
+Most of the times that I have used a combination of Go and Beego framework, I add the following lines:
+
+```bash
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+
+# and for the `bee` tool:
+export PATH=$PATH:$GOPATH/bin
+```
