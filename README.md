@@ -2,7 +2,6 @@
 ## Test environment
  - Raspberry Pi 3
  - Host OS: Raspbian Jessie Lite image (downloaded [2016-09-23-raspbian-jessie-lite.zip](http://director.downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2016-09-28/2016-09-23-raspbian-jessie-lite.zip) from the official site)
- - Docker image: `docker pull resin/rpi-raspbian:jessie-20160831`
 
 # #1 Without Go Version Manager (gvm)
 
