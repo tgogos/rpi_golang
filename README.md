@@ -28,8 +28,8 @@ mkdir -p $HOME/go1.4
 tar -xzf go1.4.3.linux-armv7.tar.gz -C $HOME/go1.4 --strip-components=1
 
 rm -fr /usr/local/go
-wget https://storage.googleapis.com/golang/go1.5.2.src.tar.gz
-tar -xz -C /usr/local -f go1.5.2.src.tar.gz
+wget https://dl.google.com/go/go1.10.3.src.tar.gz
+tar -xz -C /usr/local -f go1.10.3.src.tar.gz
 
 cd /usr/local/go/src
 time GOROOT_BOOTSTRAP=/root/go1.4 ./make.bash
