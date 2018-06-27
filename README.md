@@ -32,10 +32,35 @@ wget https://dl.google.com/go/go1.10.3.src.tar.gz
 tar -xz -C /usr/local -f go1.10.3.src.tar.gz
 
 cd /usr/local/go/src
-time GOROOT_BOOTSTRAP=/root/go1.4 ./make.bash
-go version #test that the new version is printed out
+time GOROOT_BOOTSTRAP=/root/go1.4 ./make.bash  # See sample output below
+go version  # test that the new version is printed out
 ```
 
+### Output of `./make.bash`
+
+```shell
+root@rpi:/usr/local/go/src# time GOROOT_BOOTSTRAP=/root/go1.4 ./make.bash
+Building Go cmd/dist using /root/go1.4.
+Building Go toolchain1 using /root/go1.4.
+Building Go bootstrap cmd/go (go_bootstrap) using Go toolchain1.
+Building Go toolchain2 using go_bootstrap and Go toolchain1.
+Building Go toolchain3 using go_bootstrap and Go toolchain2.
+
+
+Building packages and commands for linux/arm.
+---
+Installed Go for linux/arm in /usr/local/go
+Installed commands in /usr/local/go/bin
+
+real    8m42.421s
+user    18m36.579s
+sys     0m44.624s
+
+
+
+root@rpi:/usr/local/go/src# go version
+go version go1.10.3 linux/arm
+```
 
 
 ---
